@@ -1,9 +1,5 @@
-require 'prye'
 <h1> Artists </h1> 
 
 <% @artists.each do |artist| %>
-   <li><%= artist.name  %></li>
-        <% artist.songs.each do |s| %>
-            <li><%= link_to s.title, song_path(s) %></li>
-            <% end %>
+   <li><%= link_to artist.name, artist_path(artist) %></li>
         <% end %>
